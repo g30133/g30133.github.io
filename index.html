@@ -77,6 +77,7 @@
       font-weight:600;
       color:var(--ink);
       letter-spacing:-.02em;
+      text-transform:capitalize;
     }
     .hero p{
       max-width:620px;
@@ -192,6 +193,7 @@
       font-size:.84rem;
       font-weight:700;
       letter-spacing:.01em;
+      padding-left:14px;
     }
     .experience h3{
       margin:0 0 6px;
@@ -216,6 +218,9 @@
       padding:20px;
       background:rgba(255,255,255,0.35);
       transition:transform .28s ease, box-shadow .28s ease, background .28s ease;
+      display:flex;
+      flex-direction:column;
+      height:100%;
     }
     .project:hover{
       transform:translateY(-2px);
@@ -240,6 +245,23 @@
       color:var(--muted);
       font-size:.95rem;
     }
+
+    .project-link-row{
+      margin-top:auto;
+      padding-top:12px;
+      border-top:1px solid rgba(23,23,23,0.06);
+    }
+
+    .project-link{
+      display:inline-block;
+      font-size:.94rem;
+      font-weight:600;
+      color:var(--accent);
+      text-decoration:underline;
+      text-underline-offset:3px;
+      transition:opacity .18s ease;
+    }
+    .project-link:hover{opacity:0.75}
 
     .two-col{
       display:grid;
@@ -323,6 +345,7 @@
         grid-template-columns:1fr;
       }
       .hero{padding-top:54px}
+      .experience .label{padding-left:0}
     }
     @media (max-width:640px){
       .container{width:min(var(--max), calc(100% - 24px))}
@@ -358,7 +381,7 @@
         <div class="hero-grid">
           <div>
             <h1 class="hero-name">Geo Lee</h1>
-            <div class="hero-title">machine learning, music and audio computing, and computational creativity</div>
+            <div class="hero-title">Machine Learning, Music and Audio Computing, and Computational Creativity</div>
             <div class="hero-actions">
               <a class="btn primary" href="#projects">View selected work</a>
               <a class="btn" href="#creative">Creative work</a>
@@ -366,7 +389,7 @@
             </div>
           </div>
           <p>
-            I am a Combined Honours Mathematics and Computer Science student at UBC interested in music and audio computing, machine learning, and computational approaches to musical creativity.
+            I am a Combined Honours Computer Science and Mathematics student at UBC interested in music and audio computing, machine learning, and computational approaches to musical creativity.
           </p>
         </div>
       </div>
@@ -387,9 +410,9 @@
         <div class="card">
           <h3>Core interests</h3>
           <ul class="plain-list">
-            <li>Real-Time Interactive and Generative AI</li>
-            <li>Machine Learning for Multimedia</li>
-            <li>Mathematical Foundations of AI</li>
+            <li>Real-time interactive and generative AI</li>
+            <li>Machine learning for multimedia</li>
+            <li>Mathematical foundations of AI</li>
           </ul>
         </div>
       </div>
@@ -413,9 +436,14 @@
             <div>
               <h3>Undergraduate Research Assistant</h3>
               <p>
-                 Worked as an undergraduate research assistant in Professor Frank Wood’s lab on real-time machine learning systems in a non-simulated interactive environment, including low-latency execution interfaces, multimodal state tracking, distributed experimentation, and evaluation under realistic system and latency constraints. I also built audio and transcription pipelines on AWS and contributed to logging, orchestration, and GPU-enabled inference infrastructure for large-scale experiments.
+                Worked as an undergraduate research assistant in Professor Frank Wood’s lab on real-time machine learning systems in a non-simulated interactive environment, including low-latency execution interfaces, multimodal state tracking, distributed experimentation, and evaluation under realistic system and latency constraints. I also built audio and transcription pipelines on AWS and contributed to logging, orchestration, and GPU-enabled inference infrastructure for large-scale experiments.
               </p>
-              <p><a href="https://arxiv.org/pdf/2505.12707" target="_blank" rel="noopener noreferrer">Related paper</a> · acknowledged contribution</p>
+              <div class="project-link-row">
+                <a class="project-link" href="https://arxiv.org/pdf/2505.12707" target="_blank" rel="noopener noreferrer">
+                  Related paper
+                </a>
+                <span style="color: var(--muted);"> · acknowledged contribution</span>
+              </div>
             </div>
           </div>
 
@@ -451,7 +479,11 @@
             <p>
               Developed a live multiplayer experimental environment for evaluating agent execution beyond simulated benchmarks. Compared symbolic planning and reactive control strategies under real-time system constraints, and designed evaluation protocols measuring robustness, responsiveness, and task performance in a dynamic interactive setting. This project combined experimental system design with practical evaluation of embodied agents under real-world latency and coordination constraints.
             </p>
-            <p><a href="comparative-analysis-plaicraft.pdf" target="_blank" rel="noopener noreferrer">Read manuscript</a></p>
+            <div class="project-link-row">
+              <a class="project-link" href="comparative-analysis-plaicraft.pdf" target="_blank" rel="noopener noreferrer">
+                Read manuscript
+              </a>
+            </div>
           </article>
 
           <article class="project">
@@ -460,7 +492,11 @@
             <p>
               Designed and implemented an end-to-end machine learning pipeline for music key detection from audio recordings, including data collection and preprocessing, feature design, model training, and evaluation. Through this project, I became interested in the relationship between audio representations, prediction confidence, and the role of musical structure in learning-based systems.
             </p>
-            <p><a href="music-key-detection.pdf" target="_blank" rel="noopener noreferrer">Read manuscript</a></p>
+            <div class="project-link-row">
+              <a class="project-link" href="music-key-detection.pdf" target="_blank" rel="noopener noreferrer">
+                Read manuscript
+              </a>
+            </div>
           </article>
 
           <article class="project">
@@ -469,15 +505,11 @@
             <p>
               Implemented a modular software simulation of ideas related to Roth’s theorem using discrete Fourier analysis. The project explored computational perspectives on combinatorial proof structure and mathematical abstraction, and reflected my broader interest in formal reasoning, algorithmic structure, and mathematically grounded computational systems.
             </p>
-            <a href="roths-theorem-simulation.pdf" target="_blank" rel="noopener noreferrer">Read manuscript</a>
-          </article>
-
-          <article class="project">
-            <div class="meta">Independent project · 2021</div>
-            <h3>Spectrogram VST Plugin</h3>
-            <p>
-              Built an audio plugin for spectrogram visualization as an early independent project in music technology. Working on a tool that directly represented sound visually helped shape my interest in audio software, signal processing, and computational approaches to music.
-            </p>
+            <div class="project-link-row">
+              <a class="project-link" href="roths-theorem-simulation.pdf" target="_blank" rel="noopener noreferrer">
+                Read manuscript
+              </a>
+            </div>
           </article>
         </div>
       </div>
@@ -486,9 +518,8 @@
     <section id="creative" class="reveal">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">Creative work</div>
+          <div class="kicker">Music Production</div>
           <div>
-            <h2>Music practice</h2>
             <p>
               Outside formal coursework and research, I produce electronic music independently. This is a major reason I am drawn to music and audio research, especially questions about musical structure, sound design, originality, and what genuinely creative AI systems for music might look like.
             </p>
@@ -523,9 +554,9 @@
           <div class="experience">
             <div class="label">March 2025</div>
             <div>
-              <h3>SURE Award</h3>
+              <h3>Science Undergraduate Research Experience (SURE) Award</h3>
               <p>
-                  Received funding for full-time summer research through the UBC Faculty of Science. This support contributed to development of real-time transcription systems and infrastructure engineering for embodied AI data collection. Supervised by Dr. Frank Wood.
+                Received funding for full-time summer research through the UBC Faculty of Science. This support contributed to the development of real-time transcription systems and infrastructure engineering for embodied AI data collection. Supervised by Dr. Frank Wood.
               </p>
             </div>
           </div>
@@ -533,7 +564,7 @@
           <div class="experience">
             <div class="label">August 2023</div>
             <div>
-              <h3>NSERC Undergraduate Student Research Award</h3>
+              <h3>NSERC Undergraduate Student Research Award (USRA)</h3>
               <p>
                 Received the NSERC USRA through the UBC Faculty of Mathematics in recognition of academic performance and research potential. Supported an undergraduate research project in combinatorics and incidence geometry. Supervised by Dr. Joshua Zahl.
               </p>
@@ -571,7 +602,7 @@
         <div class="contact-grid">
           <div class="contact">
             <div class="small">Email</div>
-            <div class="value">glee16@student.ubc.ca</div>
+            <div class="value"><a href="mailto:glee16@student.ubc.ca">glee16@student.ubc.ca</a></div>
           </div>
           <div class="contact">
             <div class="small">Location</div>
@@ -579,7 +610,7 @@
           </div>
           <div class="contact">
             <div class="small">Website</div>
-            <div class="value">g30133.github.io</div>
+            <div class="value"><a href="https://g30133.github.io" target="_blank" rel="noopener noreferrer">g30133.github.io</a></div>
           </div>
         </div>
       </div>
