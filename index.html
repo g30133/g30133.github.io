@@ -49,14 +49,6 @@
     .nav-links a:hover{color:var(--ink)}
 
     .hero{padding:68px 0 34px}
-    .eyebrow{
-      display:inline-block;
-      color:var(--muted);
-      text-transform:uppercase;
-      letter-spacing:.14em;
-      font-size:.72rem;
-      margin-bottom:18px;
-    }
     .hero-grid{
       display:grid;
       grid-template-columns:1.05fr .95fr;
@@ -85,12 +77,7 @@
       font-size:1rem;
       color:var(--muted);
     }
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:24px;
-    }
+
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
       padding:10px 15px;
@@ -118,19 +105,9 @@
 
     section{padding:22px 0 18px}
     .section-head{
-      display:grid;
-      grid-template-columns:150px 1fr;
-      gap:18px;
       border-top:1px solid var(--line);
       padding-top:16px;
       margin-bottom:18px;
-    }
-    .kicker{
-      color:var(--muted);
-      text-transform:uppercase;
-      letter-spacing:.14em;
-      font-size:.72rem;
-      padding-top:5px;
     }
     .section-head h2{
       margin:0;
@@ -263,12 +240,6 @@
     }
     .project-link:hover{opacity:0.75}
 
-    .two-col{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:16px;
-    }
-
     .links{
       display:flex;
       flex-wrap:wrap;
@@ -341,7 +312,7 @@
 
     @media (max-width:860px){
       .nav-links{display:none}
-      .hero-grid, .section-head, .experience, .project-grid, .two-col, .contact-grid{
+      .hero-grid, .experience, .contact-grid{
         grid-template-columns:1fr;
       }
       .hero{padding-top:54px}
@@ -349,7 +320,6 @@
     }
     @media (max-width:640px){
       .container{width:min(var(--max), calc(100% - 24px))}
-      .hero-actions{flex-direction:column}
       .btn{width:100%}
       .card, .project{padding:18px}
       .section-head h2{font-size:1.6rem}
@@ -366,7 +336,6 @@
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
-          <a href="#creative">Creative</a>
           <a href="#awards">Awards</a>
           <a href="#contact">Contact</a>
         </div>
@@ -380,15 +349,10 @@
         <div class="hero-grid">
           <div>
             <h1 class="hero-name">Geo Lee</h1>
-            <div class="hero-title">Machine Learning, Music and Audio Computing, and Computational Creativity</div>
-            <div class="hero-actions">
-              <a class="btn primary" href="#projects">View selected work</a>
-              <a class="btn" href="#creative">Creative work</a>
-              <a class="btn" href="#contact">Contact</a>
-            </div>
+            <div class="hero-title">Machine Learning for Music and Computational Creativity</div>
           </div>
           <p>
-            I am a Combined Honours Computer Science and Mathematics student at UBC interested in music and audio computing, machine learning, and computational approaches to musical creativity.
+            I am a Combined Honours Computer Science and Mathematics student at The University of British Columbia (UBC) interested in music and audio computing, machine learning, and computational approaches to musical creativity.
           </p>
         </div>
       </div>
@@ -397,13 +361,10 @@
     <section id="about" class="reveal">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">About</div>
-          <div>
-            <h2>Research direction</h2>
-            <p>
-              In the long term, I am interested in research on musical creativity in AI, especially the problem of what a genuinely creative music model would require beyond surface-level stylistic imitation. I am particularly drawn to generative models for music and sound, representation learning for musical structure, and questions about how composition, production, and expressive decision-making might be modeled computationally. More broadly, I want to explore how machine learning can be used not just to reproduce music, but to push toward richer forms of creativity and musical understanding.
-            </p>
-          </div>
+          <h2>About</h2>
+          <p>
+            In the long term, I am interested in research on musical creativity in AI, especially the problem of what a genuinely creative music model would require beyond surface-level stylistic imitation. I am particularly drawn to generative models for music and sound, representation learning for musical structure, and questions about how composition, production, and expressive decision-making might be modeled computationally. Outside formal coursework and research, I also produce electronic music independently, which is a major reason I am drawn to music and audio research, especially questions of musical structure, sound design, originality, and what genuinely creative AI systems for music might look like.
+          </p>
         </div>
 
         <div class="card">
@@ -420,13 +381,10 @@
     <section id="experience" class="reveal">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">Experience</div>
-          <div>
-            <h2>Selected research and technical experience</h2>
-            <p>
-              My recent experience combines machine learning systems work with audio-related pipelines, real-time experimentation, and research engineering. It has given me practical experience that I want to apply more directly to music and audio research.
-            </p>
-          </div>
+          <h2>Experience</h2>
+          <p>
+            My recent experience combines machine learning systems work with audio-related pipelines, real-time experimentation, and research engineering. It has given me practical experience that I want to apply more directly to music and audio research.
+          </p>
         </div>
 
         <div class="experience-list">
@@ -462,13 +420,10 @@
     <section id="projects" class="reveal">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">Projects</div>
-          <div>
-            <h2>Selected work</h2>
-            <p>
-              These projects reflect my interests in audio, machine learning, mathematical structure, and research-oriented software development.
-            </p>
-          </div>
+          <h2>Projects</h2>
+          <p>
+            Selected projects reflecting my interests in machine learning, music and audio computing, and mathematically grounded computational work.
+          </p>
         </div>
 
         <div class="project-grid">
@@ -513,30 +468,14 @@
         </div>
       </div>
     </section>
-    
-    <section id="creative" class="reveal">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Music Production</div>
-          <div>
-            <p>
-              Outside formal coursework and research, I produce electronic music independently. This is a major reason I am drawn to music and audio research, especially questions about musical structure, sound design, originality, and what genuinely creative AI systems for music might look like.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section id="awards" class="reveal">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">Awards</div>
-          <div>
-            <h2>Selected distinctions</h2>
-            <p>
-              Selected awards and research funding reflecting academic performance, research potential, and support for independent research.
-            </p>
-          </div>
+          <h2>Awards</h2>
+          <p>
+            Selected awards and research funding reflecting academic performance, research potential, and support for independent research.
+          </p>
         </div>
 
         <div class="experience-list">
@@ -586,10 +525,8 @@
     <section id="contact" class="reveal">
       <div class="container">
         <div class="section-head">
-          <div class="kicker">Contact</div>
-          <div>
-            <h2>Links and materials</h2>
-          </div>
+          <h2>Contact</h2>
+          <p>Links and materials.</p>
         </div>
 
         <div class="links">
