@@ -48,15 +48,10 @@
     .nav-links a{transition:color .18s ease}
     .nav-links a:hover{color:var(--ink)}
 
+    /* Hero: name stacked above paragraph */
     .hero{padding:68px 0 34px}
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:30px;
-      align-items:end;
-    }
     .hero-name{
-      margin:0;
+      margin:0 0 18px;
       font-family:Georgia, "Times New Roman", serif;
       font-size:clamp(2.8rem, 6vw, 4.4rem);
       line-height:1;
@@ -88,9 +83,10 @@
       font-size:.98rem;
     }
 
+    /* About: photo on LEFT, text on right, vertically centered */
     .about-grid{
       display:grid;
-      grid-template-columns:1.25fr 220px;
+      grid-template-columns:220px 1fr;
       gap:28px;
       align-items:center;
     }
@@ -109,8 +105,6 @@
       border-radius:20px;
       border:1px solid var(--line);
       box-shadow:var(--shadow);
-      justify-self:end;
-      align-self:center;
       background:rgba(255,255,255,0.04);
     }
 
@@ -290,7 +284,10 @@
 
     @media (max-width:860px){
       .nav-links{display:none}
-      .hero-grid, .experience, .project-item, .contact-grid, .about-grid{
+      .experience, .project-item, .contact-grid{
+        grid-template-columns:1fr;
+      }
+      .about-grid{
         grid-template-columns:1fr;
       }
       .hero{padding-top:54px}
@@ -298,9 +295,6 @@
       .project-item .label{padding-left:0}
       .about-photo{
         max-width:140px;
-        justify-self:start;
-        align-self:start;
-        order:-1;
       }
     }
     @media (max-width:640px){
@@ -327,33 +321,28 @@
   </div>
 
   <main id="top">
+    <!-- Hero: name on top, paragraph below -->
     <section class="hero reveal">
       <div class="container">
-        <div class="hero-grid">
-          <div>
-            <h1 class="hero-name">Geo Lee</h1>
-          </div>
-          <p>
-            I am a Combined Honours Computer Science and Mathematics student at The University of British Columbia (UBC) in Vancouver, Canada, interested in music and audio computing, machine learning, and computational approaches to musical creativity.
-          </p>
-        </div>
+        <h1 class="hero-name">Geo Lee</h1>
+        <p>
+          I am a Combined Honours Computer Science and Mathematics student at The University of British Columbia (UBC) in Vancouver, Canada, interested in music and audio computing, machine learning, and computational approaches to musical creativity.
+        </p>
       </div>
     </section>
 
-    <section id="about" class="reveal">
+    <section id="about" class="reveal" style="padding-bottom:40px">
       <div class="container">
         <div class="section-head">
           <h2>About</h2>
         </div>
 
+        <!-- Photo on left, text on right, both vertically centered -->
         <div class="about-grid">
-          <div>
-            <p>
-              I am interested in research on musical creativity in AI, especially the problem of what a creative music model would require beyond surface-level stylistic imitation. I am particularly drawn to generative models for music and sound, representation learning for musical structure, and questions about how composition, production, and expressive decision-making might be modeled computationally. Outside formal coursework and research, I also produce electronic music independently, which is a major reason I am drawn to music and audio research, especially questions of musical structure, sound design, originality, and what creative AI systems for music might look like.
-            </p>
-          </div>
-
           <img class="about-photo" src="geo_headshot.jpg" alt="Portrait of Geo Lee" />
+          <p>
+            I am interested in research on musical creativity in AI, especially the problem of what a creative music model would require beyond surface-level stylistic imitation. I am particularly drawn to generative models for music and sound, representation learning for musical structure, and questions about how composition, production, and expressive decision-making might be modeled computationally. Outside formal coursework and research, I also produce electronic music independently, which is a major reason I am drawn to music and audio research, especially questions of musical structure, sound design, originality, and what creative AI systems for music might look like.
+          </p>
         </div>
       </div>
     </section>
@@ -373,7 +362,7 @@
             <div>
               <h3>Undergraduate Research Assistant</h3>
               <p>
-                Worked as an undergraduate research assistant in <a class="prof-link" href="https://www.cs.ubc.ca/~fwood/" target="_blank" rel="noopener noreferrer">Dr. Frank Wood’s</a> lab on real-time machine learning systems in a non-simulated interactive environment, including low-latency execution interfaces, multimodal state tracking, distributed experimentation, and evaluation under realistic system and latency constraints. I also built audio and transcription pipelines on AWS and contributed to logging, orchestration, and GPU-enabled inference infrastructure for large-scale experiments.
+                Worked as an undergraduate research assistant in <a class="prof-link" href="https://www.cs.ubc.ca/~fwood/" target="_blank" rel="noopener noreferrer">Dr. Frank Wood's</a> lab on real-time machine learning systems in a non-simulated interactive environment, including low-latency execution interfaces, multimodal state tracking, distributed experimentation, and evaluation under realistic system and latency constraints. I also built audio and transcription pipelines on AWS and contributed to logging, orchestration, and GPU-enabled inference infrastructure for large-scale experiments.
               </p>
               <div class="project-link-row">
                 <a class="project-link" href="https://arxiv.org/pdf/2505.12707" target="_blank" rel="noopener noreferrer">
@@ -440,9 +429,9 @@
           <div class="project-item">
             <div class="label">Independent project · 2022</div>
             <div>
-              <h3>A Software Simulation of the Proof of Roth’s Theorem</h3>
+              <h3>A Software Simulation of the Proof of Roth's Theorem</h3>
               <p>
-                Implemented a modular software simulation of ideas related to Roth’s theorem using discrete Fourier analysis. The project explored computational perspectives on combinatorial proof structure and mathematical abstraction, and reflected my broader interest in formal reasoning, algorithmic structure, and mathematically grounded computational systems.
+                Implemented a modular software simulation of ideas related to Roth's theorem using discrete Fourier analysis. The project explored computational perspectives on combinatorial proof structure and mathematical abstraction, and reflected my broader interest in formal reasoning, algorithmic structure, and mathematically grounded computational systems.
               </p>
               <div class="project-link-row">
                 <a class="project-link" href="roths-theorem-simulation.pdf" target="_blank" rel="noopener noreferrer">
@@ -470,7 +459,7 @@
             <div>
               <h3>Advanced Machine Learning Training Network (AML-TN) Award</h3>
               <p>
-                Selected to join UBC’s Advanced Machine Learning Training Network, which provides research funding, mentorship, and mobility support for collaboration and training opportunities with leading institutions including MILA, the Vector Institute, Oxford, and MIT. Supervised by Dr. Frank Wood.
+                Selected to join UBC's Advanced Machine Learning Training Network, which provides research funding, mentorship, and mobility support for collaboration and training opportunities with leading institutions including MILA, the Vector Institute, Oxford, and MIT. Supervised by Dr. Frank Wood.
               </p>
             </div>
           </div>
@@ -498,7 +487,7 @@
           <div class="experience">
             <div class="label">June 2022</div>
             <div>
-              <h3>Governor General’s Award</h3>
+              <h3>Governor General's Award</h3>
               <p>
                 Awarded by the Governor General of Canada to the graduating student with the highest academic average at a high school.
               </p>
