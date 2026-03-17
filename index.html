@@ -51,43 +51,17 @@
     .hero{padding:68px 0 34px}
     .hero-grid{
       display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:34px;
-      align-items:center;
-    }
-    .hero-left{
-      display:flex;
-      align-items:center;
-      gap:22px;
-      min-width:0;
-    }
-    .headshot{
-      width:116px;
-      height:116px;
-      object-fit:cover;
-      border-radius:20px;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
-      flex-shrink:0;
-      background:rgba(255,255,255,0.04);
-    }
-    .hero-text{
-      min-width:0;
+      grid-template-columns:1.05fr .95fr;
+      gap:30px;
+      align-items:end;
     }
     .hero-name{
       margin:0;
       font-family:Georgia, "Times New Roman", serif;
-      font-size:clamp(2.4rem, 5vw, 3.8rem);
+      font-size:clamp(2.8rem, 6vw, 4.4rem);
       line-height:1;
-      letter-spacing:-.045em;
+      letter-spacing:-.05em;
       font-weight:700;
-    }
-    .hero-title{
-      margin:10px 0 0;
-      font-size:1.1rem;
-      font-weight:600;
-      color:var(--accent);
-      letter-spacing:-.01em;
     }
     .hero p{
       max-width:620px;
@@ -96,32 +70,6 @@
       color:var(--muted);
     }
 
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 15px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      font-weight:600;
-      background:rgba(255,255,255,0.04);
-      transition:transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
-    }
-    .btn:hover{
-      transform:translateY(-1px);
-      background:rgba(255,255,255,0.07);
-      border-color:var(--accent);
-      box-shadow:var(--shadow);
-    }
-    .btn.primary{
-      background:var(--accent);
-      color:#08111f;
-      border-color:var(--accent);
-    }
-    .btn.primary:hover{
-      background:#a6c4ff;
-      border-color:#a6c4ff;
-    }
-
-    section{padding:22px 0 18px}
     .section-head{
       border-top:1px solid var(--line);
       padding-top:16px;
@@ -140,37 +88,30 @@
       font-size:.98rem;
     }
 
-    .card{
-      background:rgba(255,255,255,0.03);
-      border:1px solid var(--soft);
-      border-radius:var(--radius);
-      padding:20px;
-      transition:transform .28s ease, box-shadow .28s ease, background .28s ease, border-color .28s ease;
+    .about-grid{
+      display:grid;
+      grid-template-columns:1.25fr 220px;
+      gap:28px;
+      align-items:start;
     }
-    .card:hover{
-      transform:translateY(-2px);
-      box-shadow:var(--shadow);
-      background:rgba(255,255,255,0.05);
-      border-color:var(--line);
-    }
-    .card h3{
-      margin:0 0 10px;
-      font-size:1.02rem;
-      letter-spacing:-.02em;
-    }
-    .card p{
+    .about-grid p{
       margin:0;
       color:var(--muted);
-      font-size:.97rem;
+      font-size:1rem;
+      max-width:740px;
     }
-
-    .plain-list{list-style:none;margin:0;padding:0}
-    .plain-list li{
-      padding:10px 0;
-      border-bottom:1px solid var(--soft);
-      font-size:.96rem;
+    .about-photo{
+      width:100%;
+      max-width:220px;
+      aspect-ratio:1 / 1.15;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:20px;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      justify-self:end;
+      background:rgba(255,255,255,0.04);
     }
-    .plain-list li:last-child{border-bottom:none;padding-bottom:0}
 
     .experience-list{
       display:grid;
@@ -203,52 +144,40 @@
       font-size:.96rem;
     }
 
-    .project-grid{
+    .project-list{
       display:grid;
-      grid-template-columns:1fr;
-      gap:16px;
+      gap:0;
+      border-top:1px solid var(--soft);
     }
-    .project{
-      border:1px solid var(--soft);
-      border-radius:var(--radius);
-      padding:20px;
-      background:rgba(255,255,255,0.03);
-      transition:transform .28s ease, box-shadow .28s ease, background .28s ease, border-color .28s ease;
-      display:flex;
-      flex-direction:column;
-      height:100%;
+    .project-item{
+      display:grid;
+      grid-template-columns:145px 1fr;
+      gap:18px;
+      padding:20px 0;
+      border-bottom:1px solid var(--soft);
     }
-    .project:hover{
-      transform:translateY(-2px);
-      box-shadow:var(--shadow);
-      background:rgba(255,255,255,0.05);
-      border-color:var(--line);
-    }
-    .project .meta{
+    .project-item .label{
       color:var(--accent);
-      font-size:.8rem;
+      font-size:.84rem;
       font-weight:700;
-      margin-bottom:8px;
       letter-spacing:.01em;
+      padding-left:14px;
     }
-    .project h3{
-      margin:0 0 8px;
-      font-size:1.1rem;
+    .project-item h3{
+      margin:0 0 6px;
+      font-size:1.06rem;
       letter-spacing:-.02em;
-      line-height:1.28;
     }
-    .project p{
+    .project-item p{
       margin:0;
       color:var(--muted);
-      font-size:.95rem;
+      max-width:740px;
+      font-size:.96rem;
     }
 
     .project-link-row{
-      margin-top:auto;
-      padding-top:12px;
-      border-top:1px solid var(--soft);
+      margin-top:10px;
     }
-
     .project-link{
       display:inline-block;
       font-size:.94rem;
@@ -259,6 +188,33 @@
       transition:opacity .18s ease;
     }
     .project-link:hover{opacity:0.75}
+
+    .prof-link{
+      color:var(--accent);
+      text-decoration:underline;
+      text-underline-offset:3px;
+      font-weight:600;
+      transition:opacity .18s ease;
+    }
+    .prof-link:hover{
+      opacity:0.75;
+    }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 15px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-weight:600;
+      background:rgba(255,255,255,0.04);
+      transition:transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+    .btn:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,0.07);
+      border-color:var(--accent);
+      box-shadow:var(--shadow);
+    }
 
     .links{
       display:flex;
@@ -324,7 +280,7 @@
 
     @media (prefers-reduced-motion: reduce){
       html{scroll-behavior:auto}
-      .reveal, .card, .project, .btn, .contact, .nav-links a{
+      .reveal, .btn, .contact, .nav-links a{
         transition:none !important;
         transform:none !important;
       }
@@ -333,26 +289,22 @@
 
     @media (max-width:860px){
       .nav-links{display:none}
-      .hero-grid, .experience, .contact-grid{
+      .hero-grid, .experience, .project-item, .contact-grid, .about-grid{
         grid-template-columns:1fr;
       }
-      .hero-left{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-      .headshot{
-        width:96px;
-        height:96px;
-      }
       .hero{padding-top:54px}
-      .experience .label{padding-left:0}
+      .experience .label,
+      .project-item .label{padding-left:0}
+      .about-photo{
+        max-width:140px;
+        justify-self:start;
+        order:-1;
+      }
     }
     @media (max-width:640px){
       .container{width:min(var(--max), calc(100% - 24px))}
       .btn{width:100%}
-      .card, .project{padding:18px}
       .section-head h2{font-size:1.6rem}
-      .hero-title{font-size:1.02rem}
     }
   </style>
 </head>
@@ -376,11 +328,8 @@
     <section class="hero reveal">
       <div class="container">
         <div class="hero-grid">
-          <div class="hero-left">
-            <img class="headshot" src="geo_headshot.jpg" alt="Portrait of Geo Lee" />
-            <div class="hero-text">
-              <h1 class="hero-name">Geo Lee</h1>
-            </div>
+          <div>
+            <h1 class="hero-name">Geo Lee</h1>
           </div>
           <p>
             I am a Combined Honours Computer Science and Mathematics student at The University of British Columbia (UBC) in Vancouver, Canada, interested in music and audio computing, machine learning, and computational approaches to musical creativity.
@@ -393,9 +342,16 @@
       <div class="container">
         <div class="section-head">
           <h2>About</h2>
-          <p>
-            I am interested in research on musical creativity in AI, especially the problem of what a creative music model would require beyond surface-level stylistic imitation. I am particularly drawn to generative models for music and sound, representation learning for musical structure, and questions about how composition, production, and expressive decision-making might be modeled computationally. Outside formal coursework and research, I also produce electronic music independently, which is a major reason I am drawn to music and audio research, especially questions of musical structure, sound design, originality, and what creative AI systems for music might look like.
-          </p>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <p>
+              I am interested in research on musical creativity in AI, especially the problem of what a creative music model would require beyond surface-level stylistic imitation. I am particularly drawn to generative models for music and sound, representation learning for musical structure, and questions about how composition, production, and expressive decision-making might be modeled computationally. Outside formal coursework and research, I also produce electronic music independently, which is a major reason I am drawn to music and audio research, especially questions of musical structure, sound design, originality, and what creative AI systems for music might look like.
+            </p>
+          </div>
+
+          <img class="about-photo" src="headshot.png" alt="Portrait of Geo Lee" />
         </div>
       </div>
     </section>
@@ -415,7 +371,7 @@
             <div>
               <h3>Undergraduate Research Assistant</h3>
               <p>
-                Worked as an undergraduate research assistant in <a href="https://www.cs.ubc.ca/~fwood/" target="_blank" rel="noopener noreferrer">Dr. Frank Wood’s</a> lab on real-time machine learning systems in a non-simulated interactive environment, including low-latency execution interfaces, multimodal state tracking, distributed experimentation, and evaluation under realistic system and latency constraints. I also built audio and transcription pipelines on AWS and contributed to logging, orchestration, and GPU-enabled inference infrastructure for large-scale experiments.
+                Worked as an undergraduate research assistant in <a class="prof-link" href="https://www.cs.ubc.ca/~fwood/" target="_blank" rel="noopener noreferrer">Dr. Frank Wood’s</a> lab on real-time machine learning systems in a non-simulated interactive environment, including low-latency execution interfaces, multimodal state tracking, distributed experimentation, and evaluation under realistic system and latency constraints. I also built audio and transcription pipelines on AWS and contributed to logging, orchestration, and GPU-enabled inference infrastructure for large-scale experiments.
               </p>
               <div class="project-link-row">
                 <a class="project-link" href="https://arxiv.org/pdf/2505.12707" target="_blank" rel="noopener noreferrer">
@@ -429,7 +385,7 @@
           <div class="experience">
             <div class="label">UBC</div>
             <div>
-              <h3>Undergraduate Teaching Assistant, <a href="https://www.cs.ubc.ca/~cheeren/teaching/Syllabus.pdf" target="_blank" rel="noopener noreferrer">CPSC 221</a></h3>
+              <h3>Undergraduate Teaching Assistant, <a class="prof-link" href="https://www.cs.ubc.ca/~cheeren/teaching/Syllabus.pdf" target="_blank" rel="noopener noreferrer">CPSC 221</a></h3>
               <p>
                 Led tutorial sections in data structures and algorithms, supporting algorithmic reasoning, implementation correctness, and complexity analysis.
               </p>
@@ -442,51 +398,57 @@
     <section id="projects" class="reveal">
       <div class="container">
         <div class="section-head">
-          <h2>Projects</h2>
+          <h2>Select Projects</h2>
           <p>
             Selected projects reflecting my interests in machine learning, music and audio computing, and mathematically grounded computational work.
           </p>
         </div>
 
-        <div class="project-grid">
-          <article class="project">
-            <div class="meta">UBC PLAI · 2025</div>
-            <h3>A Comparative Analysis of Embodied AI Agents in Minecraft</h3>
-            <p>
-              Developed a live multiplayer experimental environment for evaluating agent execution beyond simulated benchmarks. Compared symbolic planning and reactive control strategies under real-time system constraints, and designed evaluation protocols measuring robustness, responsiveness, and task performance in a dynamic interactive setting. This project combined experimental system design with practical evaluation of embodied agents under real-world latency and coordination constraints.
-            </p>
-            <div class="project-link-row">
-              <a class="project-link" href="comparative-analysis-plaicraft.pdf" target="_blank" rel="noopener noreferrer">
-                Read manuscript
-              </a>
+        <div class="project-list">
+          <div class="project-item">
+            <div class="label">UBC PLAI · 2025</div>
+            <div>
+              <h3>A Comparative Analysis of Embodied AI Agents in Minecraft</h3>
+              <p>
+                Developed a live multiplayer experimental environment for evaluating agent execution beyond simulated benchmarks. Compared symbolic planning and reactive control strategies under real-time system constraints, and designed evaluation protocols measuring robustness, responsiveness, and task performance in a dynamic interactive setting. This project combined experimental system design with practical evaluation of embodied agents under real-world latency and coordination constraints.
+              </p>
+              <div class="project-link-row">
+                <a class="project-link" href="comparative-analysis-plaicraft.pdf" target="_blank" rel="noopener noreferrer">
+                  Read manuscript
+                </a>
+              </div>
             </div>
-          </article>
+          </div>
 
-          <article class="project">
-            <div class="meta">Independent project · 2022</div>
-            <h3>Deep Neural Network Based Music Key Detection System</h3>
-            <p>
-              Designed and implemented an end-to-end machine learning pipeline for music key detection from audio recordings, including data collection and preprocessing, feature design, model training, and evaluation. Through this project, I became interested in the relationship between audio representations, prediction confidence, and the role of musical structure in learning-based systems.
-            </p>
-            <div class="project-link-row">
-              <a class="project-link" href="music-key-detection.pdf" target="_blank" rel="noopener noreferrer">
-                Read manuscript
-              </a>
+          <div class="project-item">
+            <div class="label">Independent project · 2022</div>
+            <div>
+              <h3>Deep Neural Network Based Music Key Detection System</h3>
+              <p>
+                Designed and implemented an end-to-end machine learning pipeline for music key detection from audio recordings, including data collection and preprocessing, feature design, model training, and evaluation. Through this project, I became interested in the relationship between audio representations, prediction confidence, and the role of musical structure in learning-based systems.
+              </p>
+              <div class="project-link-row">
+                <a class="project-link" href="music-key-detection.pdf" target="_blank" rel="noopener noreferrer">
+                  Read manuscript
+                </a>
+              </div>
             </div>
-          </article>
+          </div>
 
-          <article class="project">
-            <div class="meta">Independent project · 2022</div>
-            <h3>A Software Simulation of the Proof of Roth’s Theorem</h3>
-            <p>
-              Implemented a modular software simulation of ideas related to Roth’s theorem using discrete Fourier analysis. The project explored computational perspectives on combinatorial proof structure and mathematical abstraction, and reflected my broader interest in formal reasoning, algorithmic structure, and mathematically grounded computational systems.
-            </p>
-            <div class="project-link-row">
-              <a class="project-link" href="roths-theorem-simulation.pdf" target="_blank" rel="noopener noreferrer">
-                Read manuscript
-              </a>
+          <div class="project-item">
+            <div class="label">Independent project · 2022</div>
+            <div>
+              <h3>A Software Simulation of the Proof of Roth’s Theorem</h3>
+              <p>
+                Implemented a modular software simulation of ideas related to Roth’s theorem using discrete Fourier analysis. The project explored computational perspectives on combinatorial proof structure and mathematical abstraction, and reflected my broader interest in formal reasoning, algorithmic structure, and mathematically grounded computational systems.
+              </p>
+              <div class="project-link-row">
+                <a class="project-link" href="roths-theorem-simulation.pdf" target="_blank" rel="noopener noreferrer">
+                  Read manuscript
+                </a>
+              </div>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -494,7 +456,7 @@
     <section id="awards" class="reveal">
       <div class="container">
         <div class="section-head">
-          <h2>Awards</h2>
+          <h2>Select Awards</h2>
           <p>
             Selected awards and research funding reflecting academic performance, research potential, and support for independent research.
           </p>
@@ -506,7 +468,7 @@
             <div>
               <h3>Advanced Machine Learning Training Network (AML-TN) Award</h3>
               <p>
-                Selected to join UBC’s Advanced Machine Learning Training Network, which provides research funding, mentorship, and mobility support for collaboration and training opportunities with leading institutions including MILA, the Vector Institute, Oxford, and MIT. Supervised by Dr. Frank Wood.
+                Selected to join UBC’s Advanced Machine Learning Training Network, which provides research funding, mentorship, and mobility support for collaboration and training opportunities with leading institutions including MILA, the Vector Institute, Oxford, and MIT. Supervised by <a class="prof-link" href="https://www.cs.ubc.ca/~fwood/" target="_blank" rel="noopener noreferrer">Dr. Frank Wood</a>.
               </p>
             </div>
           </div>
@@ -516,7 +478,7 @@
             <div>
               <h3>Science Undergraduate Research Experience (SURE) Award</h3>
               <p>
-                Received funding for full-time summer research through the UBC Faculty of Science. This support contributed to the development of real-time transcription systems and infrastructure engineering for embodied AI data collection. Supervised by Dr. Frank Wood.
+                Received funding for full-time summer research through the UBC Faculty of Science. This support contributed to the development of real-time transcription systems and infrastructure engineering for embodied AI data collection. Supervised by <a class="prof-link" href="https://www.cs.ubc.ca/~fwood/" target="_blank" rel="noopener noreferrer">Dr. Frank Wood</a>.
               </p>
             </div>
           </div>
@@ -526,7 +488,7 @@
             <div>
               <h3>Natural Sciences and Engineering Research Council of Canada Undergraduate Student Research Award (NSERC USRA)</h3>
               <p>
-                Received the NSERC USRA through the UBC Faculty of Mathematics in recognition of academic performance and research potential. Supported an undergraduate research project in combinatorics and incidence geometry. Supervised by <a href="https://jzahl.github.io" target="_blank" rel="noopener noreferrer">Dr. Joshua Zahl</a>.
+                Received the NSERC USRA through the UBC Faculty of Mathematics in recognition of academic performance and research potential. Supported an undergraduate research project in combinatorics and incidence geometry. Supervised by <a class="prof-link" href="https://jzahl.github.io" target="_blank" rel="noopener noreferrer">Dr. Joshua Zahl</a>.
               </p>
             </div>
           </div>
