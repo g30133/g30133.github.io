@@ -51,9 +51,28 @@
     .hero{padding:68px 0 34px}
     .hero-grid{
       display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:30px;
-      align-items:end;
+      grid-template-columns:1.1fr .9fr;
+      gap:34px;
+      align-items:center;
+    }
+    .hero-left{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      min-width:0;
+    }
+    .headshot{
+      width:116px;
+      height:116px;
+      object-fit:cover;
+      border-radius:20px;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      flex-shrink:0;
+      background:rgba(255,255,255,0.04);
+    }
+    .hero-text{
+      min-width:0;
     }
     .hero-name{
       margin:0;
@@ -317,6 +336,14 @@
       .hero-grid, .experience, .contact-grid{
         grid-template-columns:1fr;
       }
+      .hero-left{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .headshot{
+        width:96px;
+        height:96px;
+      }
       .hero{padding-top:54px}
       .experience .label{padding-left:0}
     }
@@ -349,12 +376,14 @@
     <section class="hero reveal">
       <div class="container">
         <div class="hero-grid">
-          <div>
-            <h1 class="hero-name">Geo Lee</h1>
-            <div class="hero-title">Machine Learning for Music and Computational Creativity</div>
+          <div class="hero-left">
+            <img class="headshot" src="geo_headshot.jpg" alt="Portrait of Geo Lee" />
+            <div class="hero-text">
+              <h1 class="hero-name">Geo Lee</h1>
+            </div>
           </div>
           <p>
-            I am a Combined Honours Computer Science and Mathematics student at The University of British Columbia (UBC) interested in music and audio computing, machine learning, and computational approaches to musical creativity.
+            I am a Combined Honours Computer Science and Mathematics student at The University of British Columbia (UBC) in Vancouver, Canada, interested in music and audio computing, machine learning, and computational approaches to musical creativity.
           </p>
         </div>
       </div>
@@ -365,7 +394,7 @@
         <div class="section-head">
           <h2>About</h2>
           <p>
-            In the long term, I am interested in research on musical creativity in AI, especially the problem of what a genuinely creative music model would require beyond surface-level stylistic imitation. I am particularly drawn to generative models for music and sound, representation learning for musical structure, and questions about how composition, production, and expressive decision-making might be modeled computationally. Outside formal coursework and research, I also produce electronic music independently, which is a major reason I am drawn to music and audio research, especially questions of musical structure, sound design, originality, and what genuinely creative AI systems for music might look like.
+            I am interested in research on musical creativity in AI, especially the problem of what a creative music model would require beyond surface-level stylistic imitation. I am particularly drawn to generative models for music and sound, representation learning for musical structure, and questions about how composition, production, and expressive decision-making might be modeled computationally. Outside formal coursework and research, I also produce electronic music independently, which is a major reason I am drawn to music and audio research, especially questions of musical structure, sound design, originality, and what creative AI systems for music might look like.
           </p>
         </div>
       </div>
@@ -386,7 +415,7 @@
             <div>
               <h3>Undergraduate Research Assistant</h3>
               <p>
-                Worked as an undergraduate research assistant in Professor Frank Wood’s lab on real-time machine learning systems in a non-simulated interactive environment, including low-latency execution interfaces, multimodal state tracking, distributed experimentation, and evaluation under realistic system and latency constraints. I also built audio and transcription pipelines on AWS and contributed to logging, orchestration, and GPU-enabled inference infrastructure for large-scale experiments.
+                Worked as an undergraduate research assistant in <a href="https://www.cs.ubc.ca/~fwood/" target="_blank" rel="noopener noreferrer">Dr. Frank Wood’s</a> lab on real-time machine learning systems in a non-simulated interactive environment, including low-latency execution interfaces, multimodal state tracking, distributed experimentation, and evaluation under realistic system and latency constraints. I also built audio and transcription pipelines on AWS and contributed to logging, orchestration, and GPU-enabled inference infrastructure for large-scale experiments.
               </p>
               <div class="project-link-row">
                 <a class="project-link" href="https://arxiv.org/pdf/2505.12707" target="_blank" rel="noopener noreferrer">
@@ -400,7 +429,7 @@
           <div class="experience">
             <div class="label">UBC</div>
             <div>
-              <h3>Undergraduate Teaching Assistant, CPSC 221</h3>
+              <h3>Undergraduate Teaching Assistant, <a href="https://www.cs.ubc.ca/~cheeren/teaching/Syllabus.pdf" target="_blank" rel="noopener noreferrer">CPSC 221</a></h3>
               <p>
                 Led tutorial sections in data structures and algorithms, supporting algorithmic reasoning, implementation correctness, and complexity analysis.
               </p>
@@ -495,9 +524,9 @@
           <div class="experience">
             <div class="label">August 2023</div>
             <div>
-              <h3>National Sciences and Engineering Research Council of Canada Undergraduate Student Research Award (NSERC USRA)</h3>
+              <h3>Natural Sciences and Engineering Research Council of Canada Undergraduate Student Research Award (NSERC USRA)</h3>
               <p>
-                Received the NSERC USRA through the UBC Faculty of Mathematics in recognition of academic performance and research potential. Supported an undergraduate research project in combinatorics and incidence geometry. Supervised by Dr. Joshua Zahl.
+                Received the NSERC USRA through the UBC Faculty of Mathematics in recognition of academic performance and research potential. Supported an undergraduate research project in combinatorics and incidence geometry. Supervised by <a href="https://jzahl.github.io" target="_blank" rel="noopener noreferrer">Dr. Joshua Zahl</a>.
               </p>
             </div>
           </div>
@@ -507,7 +536,7 @@
             <div>
               <h3>Governor General’s Award</h3>
               <p>
-                Awarded by the Governor General of Canada.
+                Awarded by the Governor General of Canada to the graduating student with the highest academic average at a high school.
               </p>
             </div>
           </div>
